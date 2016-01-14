@@ -4,16 +4,16 @@ use std::path::Path;
 use image::ImageBuffer;
 
 fn main() {
-    let begin_point = Point::new(2000, 2000);
-    let end_point = Point::new(3000, 2000);
+    let begin_point = Point::new(200, 200);
+    let end_point = Point::new(300, 200);
     let begin_color= Color::new(255, 0, 0);
     let end_color = Color::new(0, 255, 255);
-    let iterate_count = 25;
+    let iterate_count = 5;
     let lines = get_lines(begin_point, begin_color, end_point, end_color, iterate_count);
-    create_image(5000, 3000, &lines, "img.png");
+    create_image(500, 300, &lines, "img.png");
 }
 
-#[derive(Clone)]
+#[derive(Clone, Copy)]
 struct Color {
     r:u32,
     g:u32,
@@ -26,7 +26,7 @@ impl Color {
     }
 }
 
-#[derive(Clone)]
+#[derive(Clone, Copy)]
 struct Point {
     x:i32,
     y:i32,
@@ -38,7 +38,6 @@ impl Point {
     }
 }
 
-#[derive(Clone)]
 struct Line {
     begin_point: Point,
     end_point: Point,
@@ -121,7 +120,7 @@ fn get_lines(point_1:Point, color_1:Color, point_2:Point, color_2:Color, level:i
     } else {
         let middle_point = get_middle_point(&point_1, &point_2);
         let mut lines: Vec<Line> = vec![];
-        let prev = &mut get_lines(point_1, color_1, middle_point.clone(), middle_color.clone(), level - 1);
+        let prev = &mut get_lines(point_1, color_1, middle_point, middle_color, level - 1);
         let next = &mut get_lines(middle_point, middle_color, point_2, color_2, level - 1);
         lines.append(prev);
         lines.append(next);
