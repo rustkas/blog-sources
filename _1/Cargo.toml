@@ -1,4 +1,4 @@
 [package]
-name = "life"
+name = "graph"
 version = "0.1.0"
 authors = ["HaruAtari <HaruAtari@gmail.com>"]
