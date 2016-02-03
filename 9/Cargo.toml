@@ -1,0 +1,7 @@
+[package]
+name = "9"
+version = "0.1.0"
+authors = ["HaruAtari <HaruAtari@gmail.com>"]
+
+[lib]
+name = "graph"
