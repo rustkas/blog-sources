@@ -33,7 +33,7 @@ impl<N> Graph<N> for AdjacencyList<N> {
         AdjacencyList {
             map: HashMap::new(),
             list: HashMap::new(),
-            next_value: 1,
+            next_value: 0,
         }
     }
 
@@ -83,7 +83,7 @@ impl<N> Graph<N> for AdjacencyMatrix<N> {
         AdjacencyMatrix {
             map: HashMap::new(),
             list: HashMap::new(),
-            next_value: 1,
+            next_value: 0,
         }
     }
 
