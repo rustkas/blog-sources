@@ -8,21 +8,21 @@ use graph::ListOfEdges;
 fn main() {
 let mut adjacency_list = AdjacencyList::<&str>::new();
 create_sample_graph(&mut adjacency_list);
-// AdjacencyList {
-//     map: {
-//         0: {1: 5},
-//         1: {4: 1},
-//         2: {8: 2},
-//         3: {0: 3, 7: 4, 9: 4},
-//         4: {3: 5},
-//         5: {}
-//         6: {0: 1},
-//         7: {2: 2, 4: 2},
-//         8: {2: 5, 5: 1},
-//         9: {6: 2, 8: 2},
-//     },
-//     ...
-// }
+    // AdjacencyList {
+    //     map: {
+    //         0: {1: 5},
+    //         1: {4: 1},
+    //         2: {8: 2},
+    //         3: {0: 3, 7: 4, 9: 4},
+    //         4: {3: 5},
+    //         5: {}
+    //         6: {0: 1},
+    //         7: {2: 2, 4: 2},
+    //         8: {2: 5, 5: 1},
+    //         9: {6: 2, 8: 2},
+    //     },
+    //     ...
+    // }
 
     let mut adjacency_matrix = AdjacencyMatrix::<&str>::new();
     create_sample_graph(&mut adjacency_matrix);
