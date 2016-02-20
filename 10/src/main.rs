@@ -6,8 +6,8 @@ use graph::AdjacencyMatrix;
 use graph::ListOfEdges;
 
 fn main() {
-let mut adjacency_list = AdjacencyList::<&str>::new();
-create_sample_graph(&mut adjacency_list);
+    let mut adjacency_list = AdjacencyList::<&str>::new();
+    create_sample_graph(&mut adjacency_list);
     // AdjacencyList {
     //     map: {
     //         0: {1: 5},
