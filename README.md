@@ -1,5 +1,6 @@
 # Исходники для статей в моем блоге
 
+* [Гибкая модульная архитектура на Yii2 - Часть 1](http://haru-atari.com/blog/14/flexible-module-architecture-on-yii2-path-1) - [**Исходный код**](https://github.com/HaruAtari/yii2-module-app/tree/76704e37f932e9943e3cb3be98fdd0654cded957)
 * [Принципы программирования - Часть 4: Сообщения](http://haru-atari.com/blog/12/programming-guidelines-part-4-messages)
 * [Принципы программирования - Часть 3: Жизненный цикл объектов](http://haru-atari.com/blog/11/programming-guidelines-part-3-lifecycle-of-objects)
 * [Принципы программирования - Часть 2: Избавляемся от NULL](http://haru-atari.com/blog/13/programming-guidelines-part-2-getting-rid-of-null)
