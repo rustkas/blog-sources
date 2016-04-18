@@ -1,7 +1,7 @@
 # Исходники для статей в моем блоге
 
-* [Часть 3: Работа с базой данных и миграции](http://haru-atari.com/blog/16/flexible-module-architecture-on-yii2-path-3-working-with-database-and-migrations) - [**Исходный код**](https://github.com/HaruAtari/yii2-module-app/tree/c2cd9001e4bca5ed27d841fc2663b001cc2e22c9)
-* [Часть 2: Взаимодействие между модулями и интернационализация (I18N)](http://haru-atari.com/blog/15/flexible-module-architecture-on-yii2-path-1-interaction-between-modules-and-internationalization) - [**Исходный код**](https://github.com/HaruAtari/yii2-module-app/tree/9c9ef7390a72f6729c523e7c9f216953c9c1ceb5)
+* [Гибкая модульная архитектура на Yii2 - Часть 3: Работа с базой данных и миграции](http://haru-atari.com/blog/16/flexible-module-architecture-on-yii2-path-3-working-with-database-and-migrations) - [**Исходный код**](https://github.com/HaruAtari/yii2-module-app/tree/c2cd9001e4bca5ed27d841fc2663b001cc2e22c9)
+* [Гибкая модульная архитектура на Yii2 - Часть 2: Взаимодействие между модулями и интернационализация (I18N)](http://haru-atari.com/blog/15/flexible-module-architecture-on-yii2-path-1-interaction-between-modules-and-internationalization) - [**Исходный код**](https://github.com/HaruAtari/yii2-module-app/tree/9c9ef7390a72f6729c523e7c9f216953c9c1ceb5)
 * [Гибкая модульная архитектура на Yii2 - Часть 1: Подключение модулей, роутинг и события](http://haru-atari.com/blog/14/flexible-module-architecture-on-yii2-path-1) - [**Исходный код**](https://github.com/HaruAtari/yii2-module-app/tree/76704e37f932e9943e3cb3be98fdd0654cded957)
 * [Принципы программирования - Часть 4: Сообщения](http://haru-atari.com/blog/12/programming-guidelines-part-4-messages)
 * [Принципы программирования - Часть 3: Жизненный цикл объектов](http://haru-atari.com/blog/11/programming-guidelines-part-3-lifecycle-of-objects)
