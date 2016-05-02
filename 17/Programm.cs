@@ -8,8 +8,23 @@ namespace ConsoleApplication
     {
         static void Main(string[] args)
         {
-
-        }
+            var graph = new Graph();
+            var n1 = graph.CreateNode("node 1");
+            var n2 = graph.CreateNode("node 2");
+            var n3 = graph.CreateNode("node 3");
+            var n4 = graph.CreateNode("node 4");
+            var n5 = graph.CreateNode("node 5");
+            var n6 = graph.CreateNode("node 6");
+            var n7 = graph.CreateNode("node 7");
+            graph.AddEdge(n6, n1, 4);
+            graph.AddEdge(n1, n2, 3);
+            graph.AddEdge(n1, n3, 2, true);
+            graph.AddEdge(n2, n3, 2);
+            graph.AddEdge(n3, n7, 6);
+            graph.AddEdge(n3, n5, 1);
+            graph.AddEdge(n3, n4, 9, true);
+            graph.AddEdge(n5, n4, 2);
+        }        
     }
 
 
@@ -42,7 +57,6 @@ namespace ConsoleApplication
     class Graph
     {
         Dictionary<Node, Dictionary<Node, Weight>> map = new Dictionary<Node, Dictionary<Node, Weight>>();
-        Weight defaultWeight = 1;
 
         /// <summary>
         /// Add to graph new node with the specified value.
@@ -61,10 +75,10 @@ namespace ConsoleApplication
         /// </summary>
         /// <param name="n1">Begin node.</param>
         /// <param name="n2">End node.</param>
-        /// <param name="bidirect">Create bidirect edge.</param>
-        public void AddEdge(Node n1, Node n2, bool bidirect)
+        /// <param name="weight">Weight of edge.</param>
+        public void AddEdge(Node n1, Node n2, Weight weight)
         {
-            AddEdge(n1, n2, bidirect, defaultWeight);
+            map[n1].Add(n2, weight);
         }
 
         /// <summary>
@@ -72,14 +86,14 @@ namespace ConsoleApplication
         /// </summary>
         /// <param name="n1">Begin node.</param>
         /// <param name="n2">End node.</param>
-        /// <param name="bidirect">Create bidirect edge.</param>
         /// <param name="weight">Weight of edge.</param>
-        public void AddEdge(Node n1, Node n2, bool bidirect, Weight weight)
+        /// <param name="bidirect">Create bidirect edge.</param>
+        public void AddEdge(Node n1, Node n2, Weight weight, bool bidirect)
         {
-            map[n1].Add(n2, weight);
+            AddEdge(n1, n2, weight);
             if (bidirect)
             {
-                map[n2].Add(n1, weight);
+                AddEdge(n2, n1, weight);
             }
         }
 
