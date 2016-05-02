@@ -8,103 +8,46 @@ namespace ConsoleApplication
     {
         static void Main(string[] args)
         {
-            var graph = new Graph();
-            var n1 = graph.CreateNode("node 1");
-            var n2 = graph.CreateNode("node 2");
-            var n3 = graph.CreateNode("node 3");
-            var n4 = graph.CreateNode("node 4");
-            var n5 = graph.CreateNode("node 5");
-            var n6 = graph.CreateNode("node 6");
-            var n7 = graph.CreateNode("node 7");
-            graph.AddEdge(n6, n1, 4);
-            graph.AddEdge(n1, n2, 3);
-            graph.AddEdge(n1, n3, 2, true);
-            graph.AddEdge(n2, n3, 2);
-            graph.AddEdge(n3, n7, 6);
-            graph.AddEdge(n3, n5, 1);
-            graph.AddEdge(n3, n4, 9, true);
-            graph.AddEdge(n5, n4, 2);
-        }        
+            var n1 = new Node("node 1");
+            var n2 = new Node("node 2");
+            var n3 = new Node("node 3");
+            var n4 = new Node("node 4");
+            var n5 = new Node("node 5");
+            var n6 = new Node("node 6");
+            var n7 = new Node("node 7");
+            n1.Add(n2, 3);
+            n1.Add(n3, 2);
+            n2.Add(n3, 2);
+            n3.Add(n7, 6);
+            n3.Add(n5, 1);
+            n3.Add(n4, 9);
+            n3.Add(n1, 2);
+            n4.Add(n3, 9);
+            n5.Add(n4, 2);
+            n6.Add(n1, 4);
+        }
     }
-
 
     class Node
     {
         public string Value { get; }
-        Graph owner;
+        public Dictionary<Node, Weight> Children { get; }
 
-        /// <summary>
-        /// Constructor.
-        /// </summary>
-        /// <param name="value">Value.</param>
-        /// <param name="owner">Owning graph.</param>
-        public Node(string value, Graph owner)
+        public Node(string value)
         {
             Value = value;
-            this.owner = owner;
+            Children = new Dictionary<Node, Weight>();
         }
 
-        /// <summary>
-        /// Return list of nodes connected with this node.
-        /// </summary>
-        /// <returns>List of connected nodes.</returns>
-        public Dictionary<Node, Weight> GetConnectedNodes()
+        public Node(string value, Dictionary<Node, Weight> children)
         {
-            return owner.GetConnetedNodes(this);
-        }
-    }
-
-    class Graph
-    {
-        Dictionary<Node, Dictionary<Node, Weight>> map = new Dictionary<Node, Dictionary<Node, Weight>>();
-
-        /// <summary>
-        /// Add to graph new node with the specified value.
-        /// </summary>
-        /// <param name="value">Added value.</param>
-        /// <returns>Created node.</returns>
-        public Node CreateNode(string value)
-        {
-            var node = new Node(value, this);
-            map.Add(node, new Dictionary<Node, Weight>());
-            return node;
+            Value = value;
+            Children = children;
         }
 
-        /// <summary>
-        /// Add edge between two nodes.
-        /// </summary>
-        /// <param name="n1">Begin node.</param>
-        /// <param name="n2">End node.</param>
-        /// <param name="weight">Weight of edge.</param>
-        public void AddEdge(Node n1, Node n2, Weight weight)
+        public void Add(Node node, Weight weight)
         {
-            map[n1].Add(n2, weight);
-        }
-
-        /// <summary>
-        /// Add edge between two nodes.
-        /// </summary>
-        /// <param name="n1">Begin node.</param>
-        /// <param name="n2">End node.</param>
-        /// <param name="weight">Weight of edge.</param>
-        /// <param name="bidirect">Create bidirect edge.</param>
-        public void AddEdge(Node n1, Node n2, Weight weight, bool bidirect)
-        {
-            AddEdge(n1, n2, weight);
-            if (bidirect)
-            {
-                AddEdge(n2, n1, weight);
-            }
-        }
-
-        /// <summary>
-        /// Return list of nodes connected with specified node.
-        /// </summary>
-        /// <param name="node">List of connected nodes.</param>
-        /// <returns></returns>
-        public Dictionary<Node, Weight> GetConnetedNodes(Node node)
-        {
-            return map.ContainsKey(node) ? map[node] : new Dictionary<Node, int>();
+            Children.Add(node, weight);
         }
     }
 }
