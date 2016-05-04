@@ -1,53 +1,86 @@
 using System;
 using System.Collections.Generic;
-using Weight = System.Int32;
 
-namespace ConsoleApplication
+namespace Graphs
 {
     class Program
     {
         static void Main(string[] args)
         {
-            var n1 = new Node("node 1");
-            var n2 = new Node("node 2");
-            var n3 = new Node("node 3");
-            var n4 = new Node("node 4");
-            var n5 = new Node("node 5");
-            var n6 = new Node("node 6");
-            var n7 = new Node("node 7");
-            n1.Add(n2, 3);
-            n1.Add(n3, 2);
-            n2.Add(n3, 2);
-            n3.Add(n7, 6);
-            n3.Add(n5, 1);
-            n3.Add(n4, 9);
-            n3.Add(n1, 2);
-            n4.Add(n3, 9);
-            n5.Add(n4, 2);
-            n6.Add(n1, 4);
+            var n01 = new Node("01");
+            var n02 = new Node("02");
+            var n03 = new Node("03");
+            var n04 = new Node("04");
+            var n05 = new Node("05");
+            var n06 = new Node("06");
+            var n07 = new Node("07");
+            var n08 = new Node("08");
+            var n09 = new Node("09");
+            var n10 = new Node("10");
+            var n11 = new Node("11");
+            var n12 = new Node("12");
+            var n13 = new Node("13");
+            var n14 = new Node("14");
+            var n15 = new Node("15");
+            n01.AddChildren(n02).AddChildren(n03);
+            n02.AddChildren(n05);
+            n03.AddChildren(n04);
+            n04.AddChildren(n05, false).AddChildren(n10, false).AddChildren(n11, false);
+            n06.AddChildren(n01, false);
+            n07.AddChildren(n03, false).AddChildren(n08);
+            n09.AddChildren(n08).AddChildren(n10);
+            n11.AddChildren(n12).AddChildren(n13);
+            n12.AddChildren(n13);
+            n14.AddChildren(n15);
+
+            var search = new DepthFirstSearch();
+            var path = search.DFS(n05, n04);
+            PrintPath(path);
+        }
+
+        private static void PrintPath(LinkedList<Node> path)
+        {
+            Console.WriteLine();
+            if (path.Count==0)
+            {
+                Console.WriteLine("You shall not pass!");
+            }
+            else
+            {
+                Console.WriteLine("Path:");
+                foreach (var node in path)
+                {
+                    Console.WriteLine(node.Name);
+                }
+            }
+            Console.Read();
         }
     }
 
     class Node
     {
-        public string Value { get; }
-        public Dictionary<Node, Weight> Children { get; }
+        public string Name { get; }
+        public List<Node> Children { get; }
 
-        public Node(string value)
+        public Node(string name)
         {
-            Value = value;
-            Children = new Dictionary<Node, Weight>();
+            Name = name;
+            Children = new List<Node>();
         }
 
-        public Node(string value, Dictionary<Node, Weight> children)
+        public Node AddChildren(Node node, bool bidirect = true)
         {
-            Value = value;
-            Children = children;
+            Children.Add(node);
+            if (bidirect)
+            {
+                node.Children.Add(this);
+            }
+            return this;
         }
 
-        public void Add(Node node, Weight weight)
+        public void Handler()
         {
-            Children.Add(node, weight);
+            Console.WriteLine($"visited {this.Name}");
         }
     }
 }
