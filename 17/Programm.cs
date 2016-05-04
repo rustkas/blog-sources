@@ -34,7 +34,7 @@ namespace Graphs
             n14.AddChildren(n15);
 
             var search = new DepthFirstSearch();
-            var path = search.DFS(n05, n04);
+            var path = search.DLS(n06, n13,6);
             PrintPath(path);
         }
 
