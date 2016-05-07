@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Graphs
 {
@@ -41,17 +42,13 @@ namespace Graphs
         private static void PrintPath(LinkedList<Node> path)
         {
             Console.WriteLine();
-            if (path.Count==0)
+            if (path.Count == 0)
             {
                 Console.WriteLine("You shall not pass!");
             }
             else
             {
-                Console.WriteLine("Path:");
-                foreach (var node in path)
-                {
-                    Console.WriteLine(node.Name);
-                }
+                Console.WriteLine(string.Join(" -> ", path.Select(x => x.Name)));
             }
             Console.Read();
         }
