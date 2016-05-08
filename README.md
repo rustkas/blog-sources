@@ -1,5 +1,6 @@
 # Исходники для статей в моем блоге
 
+* [Алгоритмы на графах: Поиск в глубину (DFS, DLS, IDDFS)](http://haru-atari.com/blog/17/algorithms-on-graphs-deep-first-search-dfs-dls-iddfs) - [**Исходный код**](https://github.com/HaruAtari/blog-sources/tree/master/17)
 * [Гибкая модульная архитектура на Yii2 - Часть 3: Работа с базой данных и миграции](http://haru-atari.com/blog/16/flexible-module-architecture-on-yii2-path-3-working-with-database-and-migrations) - [**Исходный код**](https://github.com/HaruAtari/yii2-module-app/tree/c2cd9001e4bca5ed27d841fc2663b001cc2e22c9)
 * [Гибкая модульная архитектура на Yii2 - Часть 2: Взаимодействие между модулями и интернационализация (I18N)](http://haru-atari.com/blog/15/flexible-module-architecture-on-yii2-path-1-interaction-between-modules-and-internationalization) - [**Исходный код**](https://github.com/HaruAtari/yii2-module-app/tree/9c9ef7390a72f6729c523e7c9f216953c9c1ceb5)
 * [Гибкая модульная архитектура на Yii2 - Часть 1: Подключение модулей, роутинг и события](http://haru-atari.com/blog/14/flexible-module-architecture-on-yii2-path-1) - [**Исходный код**](https://github.com/HaruAtari/yii2-module-app/tree/76704e37f932e9943e3cb3be98fdd0654cded957)
