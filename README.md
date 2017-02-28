@@ -1,6 +1,13 @@
-# Исходники для статей в моем блоге
+# Sources for articles in my blog
 
+## Eng
+* [Flexible modular architecture on Yii2 - Part 1: module connection, routing and events](http://haru-atari.com/en/blog/23/flexible-modular-architecture-on-yii2-part-1-module-connection-routing-and-events) - [**Source code**](https://github.com/HaruAtari/yii2-module-app/tree/c2cd9001e4bca5ed27d841fc2663b001cc2e22c9)
 * [Levy C curve visualization on Rust](http://haru-atari.com/en/blog/22/levy-c-curve-visualization-on-rust) - [**Source code**](https://github.com/HaruAtari/blog-sources/tree/master/22)
+
+## Rus
+
+* [Пишем простейшие фильтры изображений на Python](http://haru-atari.com/ru/blog/26/write-elementary-image-filters-in-python) - [**Исходный код**](https://github.com/HaruAtari/blog-sources/tree/master/26)
+* [Почему нельзя забывать явно завершать вложенные транзакции в Yii2](http://haru-atari.com/ru/blog/25/why-you-should-not-forget-to-clearly-apply-nested-transactions-in-yii2)
 * [Erlang для самых маленьких. Глава 4: Система типов](http://haru-atari.com/blog/21/erlang-for-the-little-ones-chater-4-type-system)
 * [Erlang для самых маленьких. Глава 3: Базовый синтаксис функций](http://haru-atari.com/blog/20/erlang-for-the-little-ones-chater-3-basic-sintax-of-functions) - [**Исходный код**](https://github.com/HaruAtari/blog-sources/tree/master/20)
 * [Erlang для самых маленьких. Глава 2: Модули и функции](http://haru-atari.com/blog/19/erlang-for-the-little-ones-chater-2-modules-and-functions) - [**Исходный код**](https://github.com/HaruAtari/blog-sources/tree/master/19)
