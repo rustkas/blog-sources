@@ -6,6 +6,7 @@
 
 ## Rus
 
+* [Оптимизация хвостовых вызовов в Elixir и Erlang - это не так эффективно и важно, как вы думаете](http://haru-atari.com/ru/blog/28/tail-call-optimization-in-elixir-erlang-not-as-efficient-and-important-as-you-probably-think)
 * [Семь мифов о производительности Erlang](http://haru-atari.com/ru/blog/27/the-seven-myths-of-erlang-performance)
 * [Пишем простейшие фильтры изображений на Python](http://haru-atari.com/ru/blog/26/write-elementary-image-filters-in-python) - [**Исходный код**](https://github.com/HaruAtari/blog-sources/tree/master/26)
 * [Почему нельзя забывать явно завершать вложенные транзакции в Yii2](http://haru-atari.com/ru/blog/25/why-you-should-not-forget-to-clearly-apply-nested-transactions-in-yii2)
