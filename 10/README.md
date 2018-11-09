@@ -1,3 +1,1 @@
-Исходный код для статьи "Способы представления графов".
-
-http://haru-atari.com/blog/10/ways-of-representing-graphs
+Исходный код для статьи "[Способы представления графов](http://haru-atari.com/blog/10/ways-of-representing-graphs)".

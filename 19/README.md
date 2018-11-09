@@ -1,0 +1,1 @@
+Исходный код для статьи "[Erlang для самых маленьких. Глава 2: Модули и функции](http://haru-atari.com/ru/blog/19/erlang-for-the-little-ones-chater-2-modules-and-functions)".

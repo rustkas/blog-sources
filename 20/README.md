@@ -1,0 +1,1 @@
+Исходный код для статьи "[Erlang для самых маленьких. Глава 3: Базовый синтаксис функций](http://haru-atari.com/ru/blog/20/erlang-for-the-little-ones-chater-3-basic-sintax-of-functions)".
