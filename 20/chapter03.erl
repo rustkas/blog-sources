@@ -8,16 +8,17 @@
     lucky_atom/1,
     safe_division/2,
     if_bmi_tell/1,
-    assessment_of_temp/1
+    assessment_of_temp/1,
+    length/1
 ]).
 -author("Haru Atari").
 
 greet(male, Name) ->
-    io:format("Hello, Mr. ~s!", [Name]);
+    io:format("Hello, Mr. ~s!~n", [Name]);
 greet(female, Name) ->
-    io:format("Hello, Mrs. ~s!", [Name]);
+    io:format("Hello, Mrs. ~s!~n", [Name]);
 greet(_, Name) ->
-    io:format("Hello, ~s!", [Name]).
+    io:format("Hello, ~s!~n", [Name]).
 
 first([X|_])->
     X.
@@ -31,13 +32,13 @@ same(_,_) ->
     false.
 
 bmi_tell(Bmi) when Bmi =< 18.5 ->
-    "You're underweight.";
+    "You're underweight.~n";
 bmi_tell(Bmi) when Bmi =< 25 ->
-   "You're supposedly normal.";
+   "You're supposedly normal.~n";
 bmi_tell(Bmi) when Bmi =< 30 ->
-   "You're fat.";
+   "You're fat.~n";
 bmi_tell(_) ->
-    "You're very fat.".
+    "You're very fat.~n".
 
 lucky_number(X) when 10 < X, X < 20 ->
     true;
@@ -55,10 +56,10 @@ safe_division(_, _) ->
     false.
 
 if_bmi_tell(Bmi) ->
-    if Bmi =< 18.5 -> "You're underweight.";
-       Bmi =< 25   -> "You're supposedly normal.";
-       Bmi =< 30   -> "You're fat.";
-       true        -> "You're very fat."
+    if Bmi =< 18.5 -> "You're underweight.~n";
+       Bmi =< 25   -> "You're supposedly normal.~n";
+       Bmi =< 30   -> "You're fat.~n";
+       true        -> "You're very fat.~n"
     end.
 
 assessment_of_temp(Temp) ->
@@ -73,6 +74,6 @@ assessment_of_temp(Temp) ->
             'not the best tempperature'
   end.
 
-length(L) -> length(L, 0);
+length(L) -> length(L, 0).
 length([], Total) -> Total;
 length([_|T], Total) -> length(T, Total + 1).
